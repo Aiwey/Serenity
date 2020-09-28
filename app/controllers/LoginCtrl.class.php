@@ -141,6 +141,7 @@ public function action_login(){
         ]);
         SessionUtils::store("idUser", $id);
         App::getRouter()->redirectTo("homepage");
+        
         } else {
             $this->generateViewLogin();
         }
@@ -149,14 +150,14 @@ public function action_login(){
 
     
 public function generateViewLogin() {
-        App::getSmarty()->assign('log', $this->log); // dane formularza do widoku
+        App::getSmarty()->assign('log', $this->log); // form data for the view
         App::getSmarty()->display('LoginPage.tpl');
         
     }
     
     
 public function generateViewRegister() {
-        App::getSmarty()->assign('reg', $this->reg); // dane formularza do widoku
+        App::getSmarty()->assign('reg', $this->reg); // form data for the view
         App::getSmarty()->display('RegisterPage.tpl');
         
     }

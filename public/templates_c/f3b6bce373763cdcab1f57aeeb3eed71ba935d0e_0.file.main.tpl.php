@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-28 17:40:56
+/* Smarty version 3.1.34-dev-7, created on 2020-09-28 18:24:10
   from 'C:\xampp\htdocs\serenity\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f7204089b37e4_32205643',
+  'unifunc' => 'content_5f720e2acc29a7_59900421',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f3b6bce373763cdcab1f57aeeb3eed71ba935d0e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\serenity\\app\\views\\templates\\main.tpl',
-      1 => 1601307654,
+      1 => 1601310242,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f7204089b37e4_32205643 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f720e2acc29a7_59900421 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -33,7 +33,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
     <title><?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16747750145f720408947e14_14741789', 'header');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11452457625f720e2ac42d43_48703333', 'header');
 ?>
 </title>
   <!--load bootstrap & other -->
@@ -101,17 +101,23 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16747750145f720408
       </li>
     </ul>
     <form class="form-inline">
+        <?php if (count($_smarty_tpl->tpl_vars['conf']->value->roles) > 0) {?>
+            <a href="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['rel_url'][0], array( array('action'=>'logout'),$_smarty_tpl ) );?>
+"><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;"type="button">log out</button></a>
+        <?php } else { ?>
         <a href="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['rel_url'][0], array( array('action'=>'loginShow'),$_smarty_tpl ) );?>
 "><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;"type="button">sign in</button></a>
-    <button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;background-color:#dbdbdb;" type="button">sign up</button>
-  </form>
+        <a href="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['rel_url'][0], array( array('action'=>'registerShow'),$_smarty_tpl ) );?>
+"><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;background-color:#dbdbdb;" type="button">sign up</button></a>
+        <?php }?>
+        </form>
     </div>
 </nav>
    <main role="main">
          <div class="jumbotron" style="background-color: #f5f5f5;">
   <!-- inside -->
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7527957675f720408965c14_77588336', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12012020145f720e2ac7c3d5_87251396', 'content');
 ?>
 
 <br/>
@@ -151,12 +157,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </html>
 <?php }
 /* {block 'header'} */
-class Block_16747750145f720408947e14_14741789 extends Smarty_Internal_Block
+class Block_11452457625f720e2ac42d43_48703333 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header' => 
   array (
-    0 => 'Block_16747750145f720408947e14_14741789',
+    0 => 'Block_11452457625f720e2ac42d43_48703333',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -166,12 +172,12 @@ Jumbotron Template · Bootstrap<?php
 }
 /* {/block 'header'} */
 /* {block 'content'} */
-class Block_7527957675f720408965c14_77588336 extends Smarty_Internal_Block
+class Block_12012020145f720e2ac7c3d5_87251396 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_7527957675f720408965c14_77588336',
+    0 => 'Block_12012020145f720e2ac7c3d5_87251396',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

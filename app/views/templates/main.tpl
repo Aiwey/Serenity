@@ -62,9 +62,13 @@
       </li>
     </ul>
     <form class="form-inline">
+        {if count ($conf->roles)>0}
+            <a href="{rel_url action='logout'}"><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;"type="button">log out</button></a>
+        {else}
         <a href="{rel_url action='loginShow'}"><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;"type="button">sign in</button></a>
-    <button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;background-color:#dbdbdb;" type="button">sign up</button>
-  </form>
+        <a href="{rel_url action='registerShow'}"><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;background-color:#dbdbdb;" type="button">sign up</button></a>
+        {/if}
+        </form>
   {*  <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
