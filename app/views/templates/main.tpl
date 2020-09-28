@@ -63,7 +63,7 @@
     </ul>
     <form class="form-inline">
         {if count ($conf->roles)>0}
-            <a href="{rel_url action='logout'}"><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;"type="button">log out</button></a>
+        <a href="{rel_url action='logout'}"><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;"type="button">log out</button></a>
         {else}
         <a href="{rel_url action='loginShow'}"><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;"type="button">sign in</button></a>
         <a href="{rel_url action='registerShow'}"><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;background-color:#dbdbdb;" type="button">sign up</button></a>
@@ -81,6 +81,7 @@
 {block name = content} Domyślna treść zawartości .. {/block}
 <br/>
 <section>
+    <p>{if count($conf->roles)>0}Jesteś zalogowany {else}Jesteś niezalogowany{/if}</p>
                     {if $msgs->isMessage()}
                     <div class="box fit">
                     <ul>

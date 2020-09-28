@@ -5,6 +5,8 @@ namespace app\controllers;
 use core\App;
 use core\Message;
 use core\Utils;
+use core\RoleUtils;
+
 
 
 /**
@@ -18,7 +20,9 @@ class HomepageCtrl {
 		        
         $variable = 1323;
         
-        
+        if(RoleUtils::inRole('admin')){
+            App::getMessages(new Message("Jestes zalogowany jako admin", Message::INFO));
+        }
        
             App::getMessages()->addMessage(new Message("Hello world message", Message::INFO));
         Utils::addInfoMessage("Or even easier message :-)");

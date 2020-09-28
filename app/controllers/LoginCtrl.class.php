@@ -107,6 +107,15 @@ public function validateLogin(){
             if ($passwordExists==0){
                 Utils::addErrorMessage('Wrong password. Typo?');
         }
+        //assigning roles
+        // sprawdzenie, czy dane logowania poprawne
+        // (takie informacje najczęściej przechowuje się w bazie danych)
+        if ($this->log->login == "admin" && $this->log->pass == "admin") {
+            RoleUtils::addRole('admin');
+        } else {
+            RoleUtils::addRole('user');
+        }
+
             
         return !App::getMessages()->isError();
 }

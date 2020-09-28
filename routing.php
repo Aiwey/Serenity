@@ -24,5 +24,5 @@ Utils::addRoute('register', 'LoginCtrl');
 Utils::addRoute('registerShow', 'LoginCtrl');
 Utils::addRoute('login', 'LoginCtrl');
 Utils::addRoute('loginShow', 'LoginCtrl');
-Utils::addRoute('logout', 'LoginCtrl',["user"]);
+Utils::addRoute('logout', 'LoginCtrl',      ['user','admin']);
 
