@@ -62,7 +62,7 @@
       </li>
     </ul>
     <form class="form-inline">
-    <button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;"type="button">sign in</button>
+        <a href="{rel_url action='loginShow'}"><button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;"type="button">sign in</button></a>
     <button class="btn btn-sm btn-outline-secondary" style ="margin-right: 1em;background-color:#dbdbdb;" type="button">sign up</button>
   </form>
   {*  <form class="form-inline my-2 my-lg-0">
@@ -75,6 +75,20 @@
          <div class="jumbotron" style="background-color: #f5f5f5;">
   <!-- inside -->
 {block name = content} Domyślna treść zawartości .. {/block}
+<br/>
+<section>
+                    {if $msgs->isMessage()}
+                    <div class="box fit">
+                    <ul>
+                    {foreach $msgs->getMessages() as $msg}
+                    {strip}
+                    <li class="msg {if $msg->isError()}error{/if} {if $msg->isWarning()}warning{/if} {if $msg->isInfo()}info{/if}">{$msg->text}</li>
+                    {/strip}
+                    {/foreach}
+                    </ul>
+                    </div>
+                    {/if}
+                    </section>
          </div>
    </main>
 <footer class="container">

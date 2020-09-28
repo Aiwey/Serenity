@@ -18,3 +18,11 @@ Utils::addRoute('adminBands','adminCtrl');
 Utils::addRoute('browseBands','mainCtrl');
 Utils::addRoute('browseAlbums','mainCtrl');
 //Utils::addRoute('action_name', 'controller_class_name');
+
+//Access
+Utils::addRoute('register', 'LoginCtrl');
+Utils::addRoute('registerShow', 'LoginCtrl');
+Utils::addRoute('login', 'LoginCtrl');
+Utils::addRoute('loginShow', 'LoginCtrl');
+Utils::addRoute('logout', 'LoginCtrl',["user"]);
+
